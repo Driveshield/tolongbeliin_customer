@@ -314,6 +314,7 @@ final _baseUrl = 'https://dev.tolongbeliin.com/api/transaction/listprodukheader'
 
   @override
   Widget build(BuildContext context) {
+    Size screen = MediaQuery.of(context).size;
     return Scaffold(
       body: Stack(
         children: <Widget>[
@@ -430,12 +431,10 @@ final _baseUrl = 'https://dev.tolongbeliin.com/api/transaction/listprodukheader'
             Pin(size: 17.0, start: 38.0),
             Pin(size: 17.0, start: 61.0),
             child: Container(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: const AssetImage('assets/ovo.png'),
-                  fit: BoxFit.fill,
-                ),
-              ),
+            child: Icon(
+              Icons.search,
+
+            ),
             ),
           ),
           Pinned.fromPins(
@@ -469,31 +468,11 @@ final _baseUrl = 'https://dev.tolongbeliin.com/api/transaction/listprodukheader'
               ],
             ),
           ),
-          Pinned.fromPins(
-            Pin(size: 15.0, middle: 0.8083),
-            Pin(size: 15.0, start: 63.0),
-            child: Container(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: const AssetImage('assets/ovo.png'),
-                  fit: BoxFit.fill,
-                ),
-                borderRadius: BorderRadius.circular(8.0),
-              ),
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 17.0, end: 44.0),
-            Pin(size: 17.0, start: 62.0),
-            child: Container(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: const AssetImage('assets/ovo.png'),
-                  fit: BoxFit.fill,
-                ),
-              ),
-            ),
-          ),
+
+          // ovo yang deket search dihapus
+          // ovo yang deket search dihapus
+
+
           
           _isFirstLoadRunning
           ? const Center(
@@ -572,16 +551,14 @@ final _baseUrl = 'https://dev.tolongbeliin.com/api/transaction/listprodukheader'
                                                 Row(
                                                   children: [
                                                     Container(
-                                                              width: 13.0,
-                                                              height: 13.0,
-                                                              decoration: BoxDecoration(
-                                                                image: DecorationImage(
-                                                                  image: const AssetImage('assets/ovo.png'),
-                                                                  fit: BoxFit.fill,
-                                                                ),
+
+                                                              child: Icon(
+                                                                Icons.location_on,
+                                                                color: Colors.red,
+                                                                size: 15,
                                                               ),
                                                     ),
-                                                    SizedBox(width: 10,),
+                                                    SizedBox(width: 1,),
                                                     Text(
                                                         '500m, Pick up',
                                                         style: TextStyle(
@@ -1365,8 +1342,10 @@ final _baseUrl = 'https://dev.tolongbeliin.com/api/transaction/listprodukheader'
           // ),
 
           Align(
-            alignment: Alignment(-0.425, -0.681),
+            alignment: Alignment(-0.410, -0.681),
             child: Container(
+              // width: 40.0,
+              // height: 40.0,
               width: 40.0,
               height: 40.0,
               // decoration: BoxDecoration(
@@ -1417,7 +1396,7 @@ final _baseUrl = 'https://dev.tolongbeliin.com/api/transaction/listprodukheader'
               width: 23.0,
               height: 12.0,
               child: Text(
-                'Back',
+                'Back ASS',
                 style: TextStyle(
                   fontFamily: 'Rubik',
                   fontSize: 10,

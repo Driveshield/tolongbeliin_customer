@@ -451,11 +451,12 @@ class _HOMESCREENState extends State<HOMESCREEN> {
                         Homemenumakanan1(jenis: 'fashion',gambar: _svg_v65bu,idjenis: '2',ispesan: widget.ispesan,)),
                       );
                   },
-                  child: SvgPicture.string(
-                    _svg_v65bu,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
+                  // child: SvgPicture.string(
+                  //   _svg_v65bu,
+                  //   allowDrawingOutsideViewBox: true,
+                  //   fit: BoxFit.fill,
+                  // ),
+                  child: Image.asset('assets/cod.png'),
                 ),
               ),
               // ---------------------
@@ -526,6 +527,7 @@ class _HOMESCREENState extends State<HOMESCREEN> {
                 ),
               ),
               // --------
+
               Pinned.fromPins(
                 Pin(size: 52.0, start: 21.0),
                 Pin(size: 39.0, middle: 0.3995),
