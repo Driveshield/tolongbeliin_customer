@@ -62,6 +62,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
+  card_swiper: ^1.0.4
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -76,23 +77,26 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-  - assets/tolong beliin-3.png
-  - assets/dana.jpg
-  - assets/ovo.png
-  - assets/gopay.png
-  - assets/officialstore.png
-  - assets/cod.png
-  - assets/travel.png
-  - assets/iklan1.png
-  - assets/iklan2.png
-  - assets/google.png
-  - assets/avatar-gamer.png
-  - assets/Bottom Vector Ads.png
-  - assets/98194-loading.json
-  - assets/98194-loading(1).json
-  - assets/98194-loading(2).json
-  - assets/tolong beliin.png
-  - assets/map.png
+#  - assets/tolong beliin-3.png
+#  - assets/dana.jpg
+#  - assets/ovo.png
+#  - assets/gopay.png
+#  - assets/officialstore.png
+#  - assets/cod.png
+#  - assets/travel.png
+#  - assets/iklan1.png
+#  - assets/iklan2.png
+#  - assets/google.png
+#  - assets/avatar-gamer.png
+#  - assets/Bottom Vector Ads.png
+#  - assets/98194-loading.json
+#  - assets/98194-loading(1).json
+#  - assets/98194-loading(2).json
+#  - assets/tolong beliin.png
+#  - assets/map.png
+  - assets/
+  - assets/banner/
+  - assets/new_icon/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

@@ -537,23 +537,19 @@ class _Cekoutpesanan extends State<Cekoutpesanan> {
             child: Container(
               width: 30.0,
               height: 30.0,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: const AssetImage('assets/ovo.png'),
-                  fit: BoxFit.fill,
-                ),
-              ),
+             child: Icon(
+               Icons.location_on,
+               color: Colors.red,
+             ),
             ),
           ),
           Pinned.fromPins(
             Pin(size: 34.0, end: 44.0),
             Pin(size: 34.0, middle: 0.5835),
             child: Container(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: const AssetImage('assets/ovo.png'),
-                  fit: BoxFit.fill,
-                ),
+              child: Icon(
+                Icons.payment,
+                color: Colors.green,
               ),
             ),
           ),

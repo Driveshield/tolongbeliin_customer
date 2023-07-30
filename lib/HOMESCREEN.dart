@@ -10,6 +10,7 @@ import 'package:tolongbeliin_costumer/Homemenumakananescampus5.dart';
 import 'package:tolongbeliin_costumer/Homemenumakanangorengan1.dart';
 import 'package:tolongbeliin_costumer/ListViewPagination.dart';
 import 'package:tolongbeliin_costumer/Loginenduser.dart';
+import 'package:tolongbeliin_costumer/utils/banner.dart';
 
 class HOMESCREEN extends StatefulWidget {
   HOMESCREEN({super.key, this.fullname, this.ispesan});
@@ -78,15 +79,18 @@ class _HOMESCREENState extends State<HOMESCREEN> {
               // gambar iklan bawah
               Pinned.fromPins(
                 Pin(start: 24.0, end: 16.0),
-                Pin(size: 143.0, end: 64.0),
+                Pin(size: 145.0, end: 64.0),
                 child: Container(
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: const AssetImage('assets/iklan2.png'),
-                      fit: BoxFit.fill,
-                    ),
-                  ),
+                  // decoration: BoxDecoration(
+                  //   image: DecorationImage(
+                  //     // image: const AssetImage('assets/iklan2.png'),
+                  //     // image: BannerCarousel(),
+                  //     fit: BoxFit.fill,
+                  //   ),
+                  // ),
+                  child: BannerCarousel(),
                 ),
+
               ),
               // -------
               Pinned.fromPins(
@@ -119,7 +123,7 @@ class _HOMESCREENState extends State<HOMESCREEN> {
                   onTap: () {
                     Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) =>  
+                            MaterialPageRoute(builder: (context) =>
                             //ConfirmationOrder()
                             //HomeMerchantScreen(fullname: data['data'][0]['fullname'],)
                             Loginenduser()
@@ -202,10 +206,10 @@ class _HOMESCREENState extends State<HOMESCREEN> {
                       child: Text(
                         maxLines: 10,
                         overflow: TextOverflow.ellipsis,
-                        'Selamat Pagi\n ${(widget.fullname == null) ? "" : widget.fullname}',
+                        'Selamat Datang\n ${(widget.fullname == null) ? "" : widget.fullname}',
                         style: TextStyle(
                           fontFamily: 'Montserrat-Bold',
-                          fontSize: 22,
+                          fontSize: 21,
                           color: const Color(0xffffffff),
                           height: 1.3636363636363635,
                         ),
@@ -439,6 +443,7 @@ class _HOMESCREENState extends State<HOMESCREEN> {
               ),
               // -------------------
               // Gambar Kaos & Pakaian
+
               Pinned.fromPins(
                 Pin(size: 40.8, start: 26.2),
                 Pin(size: 33.0, middle: 0.3515),
@@ -446,7 +451,7 @@ class _HOMESCREENState extends State<HOMESCREEN> {
                   onTap: () {
                     Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) =>  
+                        MaterialPageRoute(builder: (context) =>
                         // ListViewPagination()),
                         Homemenumakanan1(jenis: 'fashion',gambar: _svg_v65bu,idjenis: '2',ispesan: widget.ispesan,)),
                       );
@@ -456,7 +461,10 @@ class _HOMESCREENState extends State<HOMESCREEN> {
                   //   allowDrawingOutsideViewBox: true,
                   //   fit: BoxFit.fill,
                   // ),
-                  child: Image.asset('assets/cod.png'),
+                  child: Image.asset(
+                    'assets/laundry.png',
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ),
               // ---------------------
@@ -469,21 +477,8 @@ class _HOMESCREENState extends State<HOMESCREEN> {
                     height: 30.0,
                     child: Stack(
                       children: <Widget>[
-                        SizedBox.expand(
-                            child: SvgPicture.string(
-                          _svg_itckf,
-                          allowDrawingOutsideViewBox: true,
-                          fit: BoxFit.fill,
-                        )),
-                        Pinned.fromPins(
-                          Pin(size: 1.0, middle: 0.525),
-                          Pin(size: 1.0, end: 5.0),
-                          child: SvgPicture.string(
-                            _svg_c80o6b,
-                            allowDrawingOutsideViewBox: true,
-                            fit: BoxFit.fill,
-                          ),
-                        ),
+
+
                       ],
                     ),
                   ),
@@ -492,13 +487,17 @@ class _HOMESCREENState extends State<HOMESCREEN> {
               // ----------------
               // Gambar Obat 2
               Align(
-                alignment: Alignment(0.123, -0.290),
+                alignment: Alignment(0.114, -0.290),
                 child: SizedBox(
-                  width: 35.0,
-                  height: 30.0,
-                  child: SvgPicture.string(
-                    _svg_hq015e,
-                    allowDrawingOutsideViewBox: true,
+                  width: 40.0,
+                  height: 35.0,
+                  // child: SvgPicture.string(
+                  //   _svg_hq015e,
+                  //   allowDrawingOutsideViewBox: true,
+                  // ),
+                  child: Image.asset(
+                    'assets/pharmacy.png',
+                    fit: BoxFit.fill,
                   ),
                 ),
               ),
@@ -509,9 +508,13 @@ class _HOMESCREENState extends State<HOMESCREEN> {
                 child: SizedBox(
                   width: 40.0,
                   height: 28.0,
-                  child: SvgPicture.string(
-                    _svg_io3241,
-                    allowDrawingOutsideViewBox: true,
+                  // child: SvgPicture.string(
+                  //   _svg_io3241,
+                  //   allowDrawingOutsideViewBox: true,
+                  // ),
+                  child: Image.asset(
+                    'assets/new_icon/pay.png',
+                    fit: BoxFit.fill,
                   ),
                 ),
               ),
@@ -520,9 +523,13 @@ class _HOMESCREENState extends State<HOMESCREEN> {
               Pinned.fromPins(
                 Pin(size: 30.1, end: 22.3),
                 Pin(size: 34.3, middle: 0.355),
-                child: SvgPicture.string(
-                  _svg_st9xtj,
-                  allowDrawingOutsideViewBox: true,
+                // child: SvgPicture.string(
+                //   _svg_st9xtj,
+                //   allowDrawingOutsideViewBox: true,
+                //   fit: BoxFit.fill,
+                // ),
+                child: Image.asset(
+                  'assets/new_icon/electronic.png',
                   fit: BoxFit.fill,
                 ),
               ),
@@ -562,7 +569,7 @@ class _HOMESCREENState extends State<HOMESCREEN> {
                       );
                   },
                   child: Text(
-                    'Makanan & resto',
+                    'Makanan & \nresto',
                     style: TextStyle(
                       fontFamily: 'Avenir',
                       fontSize: 11,
@@ -731,16 +738,21 @@ class _HOMESCREENState extends State<HOMESCREEN> {
                   textAlign: TextAlign.center,
                 ),
               ),
+
               // Gambar Handphone 2
               Positioned(
                 child: Align(
-                  alignment: Alignment(-0.319, -0.297),
+                  alignment: Alignment(-0.370, -0.297),
                   child: SizedBox(
                     width: 32.0,
                     height: 36.0,
-                    child: SvgPicture.string(
-                      _svg_h4a4to,
-                      allowDrawingOutsideViewBox: true,
+                    // child: SvgPicture.string(
+                    //   _svg_h4a4to,
+                    //   allowDrawingOutsideViewBox: true,
+                    // ),
+                    child: Image.asset(
+                      'assets/gadgets.png',
+                      fit: BoxFit.fill,
                     ),
                   ),
                 ),
@@ -753,10 +765,10 @@ class _HOMESCREENState extends State<HOMESCREEN> {
                   child: SizedBox(
                     width: 23.0,
                     height: 17.0,
-                    child: SvgPicture.string(
-                      _svg_xnbxbi,
-                      allowDrawingOutsideViewBox: true,
-                    ),
+                    // child: SvgPicture.string(
+                    //   _svg_xnbxbi,
+                    //   allowDrawingOutsideViewBox: true,
+                    // ),
                   ),
                 ),
               ),
@@ -803,15 +815,32 @@ class _HOMESCREENState extends State<HOMESCREEN> {
               // gambar iklan yg ditengah
               Pinned.fromPins(
                 Pin(start: 25.0, end: 18.0),
-                Pin(size: 143.0, middle: 0.5331),
+                Pin(size: 230.0, middle: 0.5331),
+
+                // child: Container(
+                //   decoration: BoxDecoration(
+                //     image: DecorationImage(
+                //       image: const AssetImage('assets/iklan1.png'),
+                //       fit: BoxFit.fill,
+                //     ),
+                //   ),
+                // ),
+
+                // child: Container(
+                //   decoration: BoxDecoration(
+                //     image: DecorationImage(
+                //       image: const AssetImage('assets/iklan1.png'),
+                //       fit: BoxFit.fill,
+                //     ),
+                //   ),
+                // ),
+
                 child: Container(
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: const AssetImage('assets/iklan1.png'),
-                      fit: BoxFit.fill,
-                    ),
-                  ),
+                    child: BannerCarousel()
+
                 ),
+
+
               ),
               // --------
               // Gambar Transaksi
@@ -825,7 +854,7 @@ class _HOMESCREENState extends State<HOMESCREEN> {
                 ),
               ),
               // --------
-              // Gambar Makanan 
+              // Gambar Makanan
               Pinned.fromPins(
                 Pin(size: 46.8, start: 32.0),
                 Pin(size: 43.5, middle: 0.6812),
@@ -836,11 +865,16 @@ class _HOMESCREENState extends State<HOMESCREEN> {
                         MaterialPageRoute(builder: (context) =>  Homemenumakanan1(jenis: 'makanan',gambar: _svg_q5rslb,idjenis: '1',ispesan: widget.ispesan)),
                       );
                   },
-                  child: SvgPicture.string(
-                    _svg_q5rslb,
-                    allowDrawingOutsideViewBox: true,
+                  child: Image.asset(
+                    'assets/fast-food.png',
                     fit: BoxFit.fill,
                   ),
+                  // child: SvgPicture.string(
+                  //   _svg_q5rslb,
+                  //   allowDrawingOutsideViewBox: true,
+                  //   fit: BoxFit.fill,
+                  // ),
+
                 ),
               ),
               // -----------

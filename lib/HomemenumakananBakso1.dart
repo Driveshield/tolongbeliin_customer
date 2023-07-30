@@ -95,7 +95,7 @@ class _HomemenumakananBakso1 extends State<HomemenumakananBakso1> {
 
         }
 
-        
+
 
         //print(json.decode(res));
       }
@@ -197,8 +197,8 @@ class _HomemenumakananBakso1 extends State<HomemenumakananBakso1> {
             });
         }
 
-        
-        
+
+
       } catch (err) {
         if (kDebugMode) {
           print('Something went wrong!');
@@ -217,7 +217,7 @@ class _HomemenumakananBakso1 extends State<HomemenumakananBakso1> {
   @override
   void initState() {
     super.initState();
-    
+
     _firstLoad();
     _controller = ScrollController()..addListener(_loadMore);
   }
@@ -235,15 +235,17 @@ class _HomemenumakananBakso1 extends State<HomemenumakananBakso1> {
   //   print(widget.storeform.name);
   // }
 
-  
+
 
   @override
   Widget build(BuildContext context) {
-    
+
     imgVariable = NetworkImage(widget.storeform.photoSrc.toString());
     return Scaffold(
       body: Stack(
         children: <Widget>[
+
+
           Container(
             decoration: BoxDecoration(
               color: const Color(0xfff7f7fa),
@@ -262,6 +264,32 @@ class _HomemenumakananBakso1 extends State<HomemenumakananBakso1> {
                   bottomRight: Radius.circular(260.0),
                   bottomLeft: Radius.circular(30.0),
                 ),
+              ),
+            ),
+          ),
+          Pinned.fromPins(
+            Pin(start: 20.0, end: -28.0),
+            Pin(size: 410.0, start: -150.0),
+            child: GestureDetector(
+              onTap: () => Navigator.of(context).pop(),
+              child: Row(
+                children: [
+                  CircleAvatar(
+                    child: Icon(Icons.arrow_back_ios_new),
+                    backgroundColor: Colors.green[900],
+                  ),
+                 SizedBox(width: 5,),
+                 Text(
+                     "Back",
+
+                   style: TextStyle(
+              fontSize: 20.5,
+              fontFamily: 'Poppins-Bold',
+              // fontWeight: FontWeight.bold,
+              color: Colors.black
+          ),
+                 )
+                ],
               ),
             ),
           ),
@@ -427,24 +455,29 @@ class _HomemenumakananBakso1 extends State<HomemenumakananBakso1> {
                           softWrap: false,
                         ),
                       ),
-                      Pinned.fromPins(
-                        Pin(size: 53.0, end: 13.0),
-                        Pin(size: 15.0, end: 4.0),
-                        child: Text(
-                          'Distance',
-                          style: TextStyle(
-                            fontFamily: 'Rubik',
-                            fontSize: 13,
-                            color: const Color(0xcc000000),
-                            shadows: [
-                              Shadow(
-                                color: const Color(0x29000000),
-                                offset: Offset(0, 5),
-                                blurRadius: 6,
-                              )
-                            ],
+                      GestureDetector(
+                        onTap: (){
+
+                        },
+                        child: Pinned.fromPins(
+                          Pin(size: 59.0, end: 13.0),
+                          Pin(size: 15.0, end: 4.0),
+                          child: Text(
+                            'Distances',
+                            style: TextStyle(
+                              fontFamily: 'Rubik',
+                              fontSize: 13,
+                              color: const Color(0xcc000000),
+                              shadows: [
+                                Shadow(
+                                  color: const Color(0x29000000),
+                                  offset: Offset(0, 5),
+                                  blurRadius: 6,
+                                )
+                              ],
+                            ),
+                            softWrap: false,
                           ),
-                          softWrap: false,
                         ),
                       ),
                     ],
@@ -452,14 +485,18 @@ class _HomemenumakananBakso1 extends State<HomemenumakananBakso1> {
                   Pinned.fromPins(
                     Pin(size: 30.0, start: 7.0),
                     Pin(size: 30.0, middle: 0.425),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: const AssetImage('assets/ovo.png'),
-                          fit: BoxFit.fill,
-                        ),
-                      ),
+                    child: Icon(
+                        Icons.location_on,
+                      color: Colors.red,
                     ),
+                    // child: Container(
+                    //   decoration: BoxDecoration(
+                    //     image: DecorationImage(
+                    //       image: const AssetImage('assets/sports.png'),
+                    //       fit: BoxFit.fill,
+                    //     ),
+                    //   ),
+                    // ),
                   ),
                 ],
               ),
@@ -506,14 +543,18 @@ class _HomemenumakananBakso1 extends State<HomemenumakananBakso1> {
                 Pinned.fromPins(
                   Pin(size: 34.0, middle: 0.4528),
                   Pin(size: 34.0, start: 3.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: const AssetImage('assets/ovo.png'),
-                        fit: BoxFit.fill,
-                      ),
-                    ),
+                  child: Icon(
+                    Icons.price_change,
+                    color: Colors.green,
                   ),
+                  // child: Container(
+                  //   decoration: BoxDecoration(
+                  //     image: DecorationImage(
+                  //       image: const AssetImage('assets/ovo.png'),
+                  //       fit: BoxFit.fill,
+                  //     ),
+                  //   ),
+                  // ),
                 ),
               ],
             ),
@@ -531,7 +572,7 @@ class _HomemenumakananBakso1 extends State<HomemenumakananBakso1> {
           //     ),
           //   ),
           // ),
-          
+
           // Pinned.fromPins(
           //   Pin(size: 99.0, end: 17.0),
           //   Pin(size: 99.0, middle: 0.777),
@@ -580,8 +621,8 @@ class _HomemenumakananBakso1 extends State<HomemenumakananBakso1> {
             margin: EdgeInsets.only(top: 550),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
-              children: 
-                [ 
+              children:
+                [
 
                   Expanded(
                       child: ListView.builder(
@@ -589,7 +630,7 @@ class _HomemenumakananBakso1 extends State<HomemenumakananBakso1> {
                         shrinkWrap: true,
                         controller: _controller,
                         itemCount: _posts.length,
-                        itemBuilder: (_, index) => 
+                        itemBuilder: (_, index) =>
                         GestureDetector(
                           onTap: () {
                             //print(_posts[index]['produk_foto'].toString());
@@ -606,7 +647,7 @@ class _HomemenumakananBakso1 extends State<HomemenumakananBakso1> {
                                                             });
                             Navigator.push(
                                                               context,
-                                                              MaterialPageRoute(builder: (context) =>  
+                                                              MaterialPageRoute(builder: (context) =>
                                                               //ConfirmationOrder()
                                                               //HomeMerchantScreen(fullname: data['data'][0]['fullname'],)
                                                               Carapesan1(storeForm: widget.storeform,produkForm: produkForm2,ispesan: widget.ispesan,)
@@ -615,7 +656,7 @@ class _HomemenumakananBakso1 extends State<HomemenumakananBakso1> {
 
                           },
                           child: Card(
-                              margin: EdgeInsets.only(left: 25,bottom: 130),
+                              margin: EdgeInsets.only(left: 25,bottom: 110),
                               color: const Color(0xfff7f7fa),
                               shadowColor: const Color(0xfff7f7fa),
                               clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -627,7 +668,7 @@ class _HomemenumakananBakso1 extends State<HomemenumakananBakso1> {
                               Column(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 crossAxisAlignment: CrossAxisAlignment.start,
-                        
+
                                 children: [
                                   // Container(
                                   //   decoration: BoxDecoration(
@@ -642,7 +683,7 @@ class _HomemenumakananBakso1 extends State<HomemenumakananBakso1> {
                                                             _posts[index]['produk_foto'].toString(),
                                                             width: 100,
                                                             height: 100,
-                                                            fit: BoxFit.fitWidth,
+                                                            fit: BoxFit.fill,
                                                             errorBuilder: (ctx, o, n) {
                                                             //print(o);
                                                             return Image.asset(
@@ -680,18 +721,18 @@ class _HomemenumakananBakso1 extends State<HomemenumakananBakso1> {
                                       )
                                     ),
                                   ),
-                                  
+
                                 ],
                               )
-                              
-                        
+
+
                               ),
                         ),
                       ),
                     ),
 
                   // when the _loadMore function is running
-                  
+
                     // Align(
                     //   alignment: Alignment(-0.007, 0.554),
                     //   child: Container(
@@ -1051,29 +1092,31 @@ class _HomemenumakananBakso1 extends State<HomemenumakananBakso1> {
           //     ],
           //   ),
           // ),
-          
-          Pinned.fromPins(
-            Pin(size: 23.0, start: 56.0),
-            Pin(size: 12.0, end: 103.0),
-            child: Text(
-              'Back',
-              style: TextStyle(
-                fontFamily: 'Rubik',
-                fontSize: 10,
-                color: const Color(0xcc3e88ff),
-              ),
-              softWrap: false,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 29.3, start: 15.8),
-            Pin(size: 29.3, end: 94.8),
-            child: SvgPicture.string(
-              _svg_vj6cij,
-              allowDrawingOutsideViewBox: true,
-              fit: BoxFit.fill,
-            ),
-          ),
+
+          // Pinned.fromPins(
+          //   Pin(size: 23.0, start: 56.0),
+          //   Pin(size: 12.0, end: 103.0),
+          //   child: Text(
+          //     'Back',
+          //     style: TextStyle(
+          //       fontFamily: 'Rubik',
+          //       fontSize: 10,
+          //       color: const Color(0xcc3e88ff),
+          //     ),
+          //     softWrap: false,
+          //   ),
+          // ),
+          // Pinned.fromPins(
+          //   Pin(size: 29.3, start: 15.8),
+          //   Pin(size: 29.3, end: 94.8),
+          //   child: SvgPicture.string(
+          //     _svg_vj6cij,
+          //     allowDrawingOutsideViewBox: true,
+          //     fit: BoxFit.fill,
+          //   ),
+          // ),
+
+
         ],
       ),
     );

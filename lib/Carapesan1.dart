@@ -436,7 +436,7 @@ bool isproses = false;
                         widget.produkForm.produk_nama.toString(),
                         style: TextStyle(
                           fontFamily: 'Rubik',
-                          fontSize: 10,
+                          fontSize: 8,
                           color: const Color(0xcc000000),
                         ),
                         softWrap: false,
@@ -570,7 +570,7 @@ bool isproses = false;
                                                             style: TextStyle(backgroundColor: const Color(0xffffffff)),
                                                             //controller: emailphoneController,
                                                             onChanged: (value) {
-                                                                  
+
                                                                   notecustomerController.text = value;
                                                             },
                                                             validator: (value) {
@@ -599,9 +599,9 @@ bool isproses = false;
                                                             // ),
                                                             // style: TextStyle(backgroundColor: Colors.white),
                                                           ),
-                                                          
-                                                          
-                                                      
+
+
+
                                                     ],
                                                   ),
                                                 ),
@@ -858,7 +858,7 @@ bool isproses = false;
               child: Stack(
                 children: <Widget>[
                   Align(
-                    alignment: Alignment(0.018, 1.0),
+                    alignment: Alignment(0.1, 1.0),
                     child: Container(
                       width: 81.0,
                       height: 27.0,
@@ -872,10 +872,10 @@ bool isproses = false;
                             blurRadius: 20,
                           ),
                         ],
-                        
+
 
                       ),
-                      child: 
+                      child:
                         TextFormField(
                                                             autocorrect: true,
                                                             minLines: 1,
@@ -885,7 +885,7 @@ bool isproses = false;
                                                             style: TextStyle(backgroundColor: const Color(0xffffffff)),
                                                             //controller: emailphoneController,
                                                             onChanged: (value) {
-                                                                  
+
                                                                   jumlahController.text = value;
 
                                                                   totalharga = int.parse(value.toString()) * int.parse(widget.produkForm.produk_harga.toString());
@@ -919,40 +919,45 @@ bool isproses = false;
                                                           )
                     ),
                   ),
-                  Pinned.fromPins(
-                    Pin(size: 35.0, end: 0.0),
-                    Pin(start: 0.0, end: 0.0),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: const Color(0xff008900),
-                        borderRadius: BorderRadius.circular(40.0),
-                        boxShadow: [
-                          BoxShadow(
-                            color: const Color(0x663e64ff),
-                            offset: Offset(0, 0),
-                            blurRadius: 20,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Pinned.fromPins(
-                    Pin(size: 37.0, start: 0.0),
-                    Pin(start: 0.0, end: 0.0),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: const Color(0xff008900),
-                        borderRadius: BorderRadius.circular(40.0),
-                        boxShadow: [
-                          BoxShadow(
-                            color: const Color(0x663e64ff),
-                            offset: Offset(0, 0),
-                            blurRadius: 20,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+
+                  //gambar ijo button plus minus
+                  // Pinned.fromPins(
+                  //   Pin(size: 35.0, end: 0.0),
+                  //   Pin(start: 0.0, end: 0.0),
+                  //   child: Container(
+                  //     decoration: BoxDecoration(
+                  //       color: const Color(0xff008900),
+                  //       borderRadius: BorderRadius.circular(40.0),
+                  //       boxShadow: [
+                  //         BoxShadow(
+                  //           color: const Color(0x663e64ff),
+                  //           offset: Offset(0, 0),
+                  //           blurRadius: 20,
+                  //         ),
+                  //       ],
+                  //     ),
+                  //   ),
+                  // ),
+                  // Pinned.fromPins(
+                  //   Pin(size: 37.0, start: 0.0),
+                  //   Pin(start: 0.0, end: 0.0),
+                  //   child: Container(
+                  //     decoration: BoxDecoration(
+                  //       color: const Color(0xff008900),
+                  //       borderRadius: BorderRadius.circular(40.0),
+                  //       boxShadow: [
+                  //         BoxShadow(
+                  //           color: const Color(0x663e64ff),
+                  //           offset: Offset(0, 0),
+                  //           blurRadius: 20,
+                  //         ),
+                  //       ],
+                  //     ),
+                  //   ),
+                  // ),
+
+
+
                 ],
               ),
             ),
@@ -989,18 +994,23 @@ bool isproses = false;
             });
             },
             child: Align(
-              alignment: Alignment(-0.442, 0.509),
+              alignment: Alignment(-0.430, 0.509),
               child: SizedBox(
                 width: 25.0,
                 height: 38.0,
-                child: Text(
-                  '  -',
-                  style: TextStyle(
-                    fontFamily: 'Rubik',
-                    fontSize: 32,
-                    color: const Color(0xfff7f7fa),
+                child: CircleAvatar(
+    backgroundColor: Colors.green,
+                  child: Center(
+                    child: Text(
+                      '-',
+                      style: TextStyle(
+                        fontFamily: 'Rubik',
+                        fontSize: 25,
+                        color: const Color(0xfff7f7fa),
+                      ),
+                      softWrap: false,
+                    ),
                   ),
-                  softWrap: false,
                 ),
               ),
             ),
@@ -1022,18 +1032,28 @@ bool isproses = false;
 
             },
             child: Align(
-              alignment: Alignment(0.428, 0.509),
+              alignment: Alignment(0.476, 0.509),
               child: SizedBox(
                 width: 25.0,
                 height: 38.0,
-                child: Text(
-                  '+  ',
-                  style: TextStyle(
-                    fontFamily: 'Rubik',
-                    fontSize: 32,
-                    color: const Color(0xfff7f7fa),
+                child: CircleAvatar(
+
+                  // width: 10,
+                  // height: 10,
+                  // color: Colors.green,
+                  backgroundColor: Colors.green,
+                  child: Center(
+                    child: Text(
+                      '+',
+                      style: TextStyle(
+                        fontFamily: 'Rubik',
+                        fontSize: 25,
+                        color: const Color(0xfff7f7fa),
+                        // color: Colors.black,
+                      ),
+                      softWrap: false,
+                    ),
                   ),
-                  softWrap: false,
                 ),
               ),
             ),
